@@ -1,16 +1,15 @@
-#include <FileConstants.au3>
+	#include <FileConstants.au3>
 #include <file.au3>
 #include <MsgBoxConstants.au3>
 #include<Date.au3>
 #include <GuiTreeView.au3>
 
 
-
 Opt("WinTitleMatchMode",2);
 Opt("WinTextMatchMode", 2) ;1=complete, 2=quick
-Opt("WinWaitDelay", 250) ;250 milliseconds
+Opt("WinWaitDelay", 500) ;500 milliseconds
 Opt("WinSearchChildren", 1) ;0=no, 1=search children also
-Opt("MouseClickDelay", 10) ;10 milliseconds
+Opt("MouseClickDelay", 50) ;10 milliseconds
 HotKeySet("{ESC}","Terminate");
 
 #region --- Au3Recorder generated code Start (v3.3.9.5 KeyboardLayout=00000409)  ---
@@ -38,6 +37,7 @@ HotKeySet("{ESC}","Terminate");
 #region --- Main MACOLA Window load and navigation to our destination
 
 	_WinWaitActivate(" Progression Workflow Explorer","Progress Bar")
+	Local Const $WinWaitTime = 750
 	;Set the root Macola window active
 	Local $hndlParentWindow = WinActive("")
 	;Get Handle on Parent (first) Macola Window
@@ -59,19 +59,21 @@ HotKeySet("{ESC}","Terminate");
 	;Get a handle on the new window, which is where all the activity will occur
 	Local $hndWindow = WinGetHandle("")
 	;pause a millisecond
-	Sleep(200)
+	Sleep($WinWaitTime)
 #EndRegion
 
 #region --- File setup (get source file, setup log file) ---
+	Local Const $FileNameText = "_ZeroCostItems.txt"
+	Local Const $LogFileNameText = "_ZeroCostItems.log"
 	Local $itemNo = ""; this will hold the value we need to insert/update
-	Sleep(200)
-	Local $sPath = "C:\NewItemFiles\"	;local path to the files
+	Sleep($WinWaitTime)
+	Local $sPath = "C:\ZeroCostItems\"	;local path to the files
 	Local $sDate = StringReplace(_NowCalcDate(),"/","") ;get the current date in YYYYMMDD format
-	Local $fileName =  $sDate & "_NewItemList.txt" ;the file to upload should be prefixed with the current date
+	Local $fileName =  $sDate & $FileNameText ;the file to upload should be prefixed with the current date
 	Local $iLineCount = _FileCountLines($sPath & $fileName) ;find out how many items we need to process
-	Local $log = FileOpen($sPath  & $sDate & "_NewItem.log",1) ;create and open a log file for today's processing
+	Local $log = FileOpen($sPath  & $sDate & $LogFileNameText,1) ;create and open a log file for today's processing
 	if $log = -1 Then
-		MsgBox($MB_SYSTEMMODAL,"Error","Error Creating/Opening Log File: " & $sPath & $sDate & "_NewItem.log")
+		MsgBox($MB_SYSTEMMODAL,"Error","Error Creating/Opening Log File: " & $sPath & $sDate & $LogFileNameText)
 		Exit
 	EndIf
 
@@ -100,21 +102,21 @@ HotKeySet("{ESC}","Terminate");
 	;This function performs all the work for adding the new items
 	Func ProcessNewItem($itemNo)
 		#region -- Entering the Item number ---
-		Sleep(200)
+		Sleep($WinWaitTime)
 		;Get a handle on the "Starting Parent Item No. input Text Box
 		Local $hndlTextBox = ControlGetHandle($hndWindow,"","Edit1")
 		;Set the Text value of the TextBox to the ItemNumber being processed
 		ControlSetText("","",$hndlTextBox,$itemNo)
-		Sleep(100)
+		Sleep($WinWaitTime)
 		;Move to the "Ending Parent Item No." Text box
 		Send("{TAB}")
-		Sleep(200)
+		Sleep($WinWaitTime)
 		;Get a handle on the "Ending Parent Item No. Input Text Box
 		Local $hndTextConfirm = ControlGetHandle($hndWindow,"","Edit2")
 		;Set the Text Value of the TextBox to the Item Number being processed
 		ControlSetText("","",$hndTextConfirm,$itemNo)
 		;pause a nanosecond
-		Sleep(250)
+		Sleep($WinWaitTime)
 		#EndRegion --- Entering the Item Number ---
 
 		#region -- First Item processed for the run ---
@@ -127,20 +129,20 @@ HotKeySet("{ESC}","Terminate");
 			;Click the "Reflect THe Shrink/Scrap Factor in Costs?" checkbox
 			ControlClick($hndWindow,"Reflect The Shrink/Scrap Factor In Costs?",$hndlReflectCB)
 			;pause briefly
-			Sleep(200)
+			Sleep($WinWaitTime)
 			;Get a handle on the "Blow Through Phantom Items?" control
 			Local $hBLowCB = ControlGetHandle($hndWindow,"","[CLASS:Button; INSTANCE:36]")
 			;Click the "Blow Through Phantom Items?" checkbox
 			ControlClick($hndWindow,"Blow Through Phantom Items?",$hBLowCB)
 			;pause briefly
-			Sleep(200)
+			Sleep($WinWaitTime)
 			;MouseClick("left",287,317,1)
 			;Get a handle on the "Update Parent Cost In Inventory?" control
 			Local $hUpdateParent = ControlGetHandle($hndWindow,"","[CLASS:Button; INSTANCE:38]")
 			;Click the "Update Parent Cost In Invetory?" checkbox
 			ControlClick($hndWindow,"Update Parent Cost In Inventory?",$hUpdateParent)
 			;pause briefly
-			Sleep(200)
+			Sleep($WinWaitTime)
 			#EndRegion -- THree Checkboxes that must be selected --
 		EndIf
 		#endregion -- First Item Processed for the run ---
@@ -150,13 +152,13 @@ HotKeySet("{ESC}","Terminate");
 		Local $hOK = ControlGetHandle($hndWindow,"","[CLASS:Button; INSTANCE:18]")
 		;Click the "OK" button
 		ControlClick($hndWindow,"OK",$hOK)
-		Sleep(200)
+		Sleep($WinWaitTime)
 		#EndRegion -- Submitting the Item for Processing ---
 
 		#region -- Notification dialogs that appear ---
 		;Now we get a big WARNING window, so we wait for it
 		_WinWaitActivate("Updating Costs","Method Is Either *AV")
-		Sleep(200)
+		Sleep($WinWaitTime)
 		;Get a handle on the WARNING Window
 		Local $hWarningWindow = WinActive("")
 		;The "Cancel" buttin has focuse when the dialog loads/displays
@@ -168,7 +170,7 @@ HotKeySet("{ESC}","Terminate");
 		#region --- Print Options - "File" must be selected here ---
 		;now we get the "Print Options" dialog window
 		_WinWaitActivate("Print Options","&Change Defaults...")
-		Sleep(200)
+		Sleep($WinWaitTime)
 		;Get a handle on the Print Options window
 		Local $hPrintOptionsWin = WinACtive("")
 		;Get a handle on the "File" radio button control
@@ -179,7 +181,7 @@ HotKeySet("{ESC}","Terminate");
 		;so click it a second time
 		ControlClick($hPrintOptionsWin,"",$hFileRB)
 		;Pause briefly
-		Sleep(200)
+		Sleep($WinWaitTime)
 		;Get a handle on the Print Options OK button control
 		Local $hPrintOptionsOK = ControlGetHandle($hPrintOptionsWin,"","[CLASS:Button; INSTANCE:1]")
 		;Click the Print Options OK button control
@@ -192,7 +194,7 @@ HotKeySet("{ESC}","Terminate");
 		Local $hPrintingWin = WinActive("")
 		;we need to wait for it to complete before we proceed to the next item
 		WinWaitNotActive($hPrintingWin)
-		Sleep(1000)
+		Sleep(2000)
 		#EndRegion --- Print Status ---
 
 		#region --- Log results of each item processing ---
@@ -211,8 +213,11 @@ HotKeySet("{ESC}","Terminate");
 		;log the end of file and move the source file to the archive directory
 		;then exit the app/script
 		if $itemCnt > $iLineCount Then
+			Local $hCanx = ControlGetHandle($hndWindow,"","[CLASS:Button; INSTANCE:19]")
+			ControlClick($hndWindow,"",$hCanx)
 			FileWriteLine($log,@YEAR&@MON&@MDAY&" "&@HOUR&":"&@MIN&":"&@SEC & "	End of file.")
 			FileMove($sPath & $fileName,$sPath & "\Archive\" & @YEAR & @MON & "\" ,8)
+			MsgBox("","Zero Cost Items","The Processing of " & $fileName & " has completed.")
 			Exit
 		EndIf
 		#EndRegion
