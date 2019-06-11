@@ -1,21 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace OEPrepForBilling
-{
-    static class Program
-    {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OEPrepForBilling());
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d58cd1200b005792eaafa345ec1dbfafe7c08eb98f110c6d34d26799e2489a0
+size 498
