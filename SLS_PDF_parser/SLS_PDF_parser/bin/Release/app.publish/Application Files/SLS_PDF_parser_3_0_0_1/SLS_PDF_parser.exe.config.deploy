@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+  </startup>
+  <appSettings>
+    <add key="alertEmail1" value="keithb@millmats.com" />
+    <!--joe.cox@hub9networks.com-->
+    <add key="isTesting" value="false" />
+    <!-- Testing File Locations -->
+    <add key="testLibrary" value="c:\temp\SLS\lib\" />
+    <add key="testProcess" value="c:\temp\SLS\process\" />
+    <add key="testArchive" value="c:\temp\SLS\archive\" />
+    <add key="testInbox" value="c:\temp\SLS\inbox\" />
+    <add key="testLogFilePath" value="c:\temp\SLS\log\"/>
+    <add key="testPreTicket" value="c:\temp\SLS\inbox\Orderall\"/>
+    
+    <add key="testPreTicketArchive" value="c:\temp\SLS\archive\Orderall\"/>
+    <!-- Production File Locations -->
+    <add key="Library" value="\\fs10\Public\MIL\Packing Slips\lib\" />
+    <add key="Process" value="\\fs10\Public\MIL\Packing Slips\process\" />
+    <add key="Archive" value="\\fs10\Public\MIL\Packing Slips\archive\" />
+    <add key="Inbox" value="\\fs10\Public\MIL\Packing Slips\inbox\" />
+    <add key="PreTicket" value="\\fs10\Public\MIL\Packing Slips\inbox\Orderall\"/>
+    <add key="PreTicketArchive" value="\\fs10\Public\MIL\Packing Slips\archive\Orderall\"/>
+    <add key="LogFilePath" value="\\fs10\Public\MIL\Packing Slips\log\"/>
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+    <!-- Archive Number of days back-->
+    <add key="ArchiveDays" value="30"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="fmProd" providerName="System.Data.sqlclient" connectionString="Data Source=MILWEBSQL01;Database=FanmatsProduction;Uid=packSlipUser;Pwd=5l5@pp;" />
+    <add name="fmDev" providerName="System.Data.sqlclient" connectionString="Data Source=MMDEVMACSQL01;Database=FanmatsProduction;Uid=sa;Pwd=m1llm4ts!;"/>
+  </connectionStrings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+  </configSections>
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+    
+  <supportedRuntime version="v2.0.50727"/></startup>
+  <appSettings>
+    <add key="IsTesting" value="0"/>
+    <add key="refreshIntervalMilliSeconds" value="600000"/>
+    <!-- 10 minutes (10*60*1000)-->
+    <add key="ClientSettingsProvider.ServiceUri" value=""/>
+    <add key="DestinationPrintFilePath" value="\\10.123.0.3\public\Shipping\PackingSlipPackages\"/>
+    <add key="PickTicketRpt" value="\\10.123.0.8\macapps\Macsql\Rpts\OE\oepikfrmsqlbins_single.rpt"/>
+    <!--\\10.123.0.8\macapps\Macsql\Rpts\OE\-->
+    <add key="TimespanPrinted" value="4"/>
+    <add key="ClientSettingsProvider.ConnectionStringName" value="DefaultConnection1"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="MacolaConnection" connectionString="Data Source=MMMACSQL01;Initial Catalog=MMShippingDB;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="MacolaDevConnection" connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=MMShippingDB;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="DefaultConnection" connectionString="Data Source = |SQL/CE|" />
+    <add name="DefaultConnection1" connectionString="Data Source = |SQL/CE|" />
+    <add name="MMShipping.Properties.Settings.MMPickTicket_Conn"
+      connectionString="Data Source=MMMACSQL01;Initial Catalog=Data_02;Persist Security Info=True;User ID=sa;Password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" connectionStringName="DefaultConnection1" credentialsProvider=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" connectionStringName="DefaultConnection1"/>
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="IsTest" value="0"/>
+    <!-- <add key="PVCDeptList" value="PVC','CARMAT" />
+    <add key="PVCWCList" value="PVC','BACKING" />-->
+    <!-- THE SINGLE QUOTES ARE REQUIRED FOR THE PVCCustNo KEY-->
+   <!-- <add key="PVCCustNo" value="'FANMATS'" />-->
+    <!-- THE SINGLE QUOTES ARE REQUIRED, IN THE INTERIOR, OF THE PVCRoutingList KEY. THE EXTERIOR
+         SINGLE QUOTES ARE SUPPLIED IN CODE-->
+   <!-- <add key="PVCRoutingList" value="PUTTING','MASCOT','TILEPVC2','CARMAT3" />
+    <add key="CJDeptList" value="CROMOJET" />-->
+    <!-- THE SINGLE QUOTES ARE REQUIRED, IN THE INTERIOR, OF THE CJWCList KEY. THE EXTERIOR
+         SINGLE QUOTES ARE SUPPLIED IN CODE-->
+   <!-- <add key="CJWCList" value="PRINT','TRIM" />
+    <add key="CJCustNo" value="h.cus_no" />-->
+    <!-- THE SINGLE QUOTES ARE REQUIRED, IN THE INTERIOR, OF THE CJRoutingList KEY. THE EXTERIOR
+         SINGLE QUOTES ARE SUPPLIED IN CODE-->
+  <!--  <add key="CJRoutingList" value="LOGO','LOGOSTK','PRINT','CARMAT3','MASCOT','RT1','PTPSS','PUTTING','TILEPVC2','VINYLPRT" />-->
+    <add key="LogFilePath" value="\\mmfilesvr02\Production\TransactCarpetBySFLogs\"/>
+    <add key="TestLogFilePath" value="C:\temp\TransactCarpetBySFLogs\"/>
+    <add key="ClientSettingsProvider.ServiceUri" value=""/>
+  </appSettings>
+  <connectionStrings>
+    <add name="MacolaConnection" providerName="System.Data.SqlClient" connectionString="Data Source=MMMACSQL01;Initial Catalog=Data_02;User=sa;password=m1llm4ts!"/>
+    <add name="MacolaDevConnection" providerName="System.Data.SqlClient" connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=Data_02;User=sa;password=m1llm4ts!"/>
+    <add name="DefaultConnection" connectionString="Data Source = |SQL/CE|"/>
+  </connectionStrings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri=""/>
+      </providers>
+    </membership>
+    <roleManager enabled="true" defaultProvider="ClientRoleProvider">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400"/>
+      </providers>
+    </roleManager>
+  </system.web>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6"/></startup></configuration>

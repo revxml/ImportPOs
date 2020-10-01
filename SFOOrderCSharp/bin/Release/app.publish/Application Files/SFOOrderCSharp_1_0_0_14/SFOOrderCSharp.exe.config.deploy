@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="ServerName" value="MMMACSQL01"/>
+    <add key="Database" value="Data_02"/>
+    <add key="Username" value="sa"/>
+    <add key="Password" value="m1llm4ts!"/>
+  </appSettings>
+</configuration>

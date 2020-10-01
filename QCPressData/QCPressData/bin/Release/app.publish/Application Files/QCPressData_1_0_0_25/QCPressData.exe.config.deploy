@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+  </configSections>
+  <appSettings>
+    <add key="IsTest" value="0"/>
+    <add key="IsBranch" value="0"/>
+    <add key="SaveFilePath" value="C:\QS_Press_Export\"/>
+    <!-- Arrays for DropDown, multiple choice controls-->
+    <add key="arColors" value="ambassador,anthracite,black,black steel,blue,brown,burgundy,charcoal,elis blue,elis brown,elis burgundy,elis green,fire engine red,green,gray,international grey,international red,micro plush-stone gray,PHS green,logo,red"/>
+    <add key="arSizes" value="3x5,4x6,3x10,2x3,4x8,60x85,75x115,85x120,85x150,85x200,85x300,114x177,115x180,115x240"/>
+    <add key="arCompounds" value="SK-101-A,RMM12"/>
+    <add key="arPresses" value="Press 2,Press 3,Press 5,Press 6,Press 7"/>
+    <!-- End of Arrays for DropDown, multiple choice controls-->
+  </appSettings>
+    <connectionStrings>
+        <add name="QualityControlConnection" connectionString="Data Source=10.123.0.9;Initial Catalog=QualityControlDB;User=sa;password=m1llm4ts!"
+            providerName="System.Data.SqlClient" />
+        <add name="QualityControlDevConnection" connectionString="Data Source=10.123.0.20;Initial Catalog=QualityControlDB;User=sa;password=m1llm4ts!"
+            providerName="System.Data.SqlClient" />
+        <add name="QCPressData.Properties.Settings.QualityControlDBConnectionString"
+            connectionString="Data Source=10.123.0.9;Initial Catalog=QualityControlDB;Persist Security Info=True;User ID=sa;Password=m1llm4ts!"
+            providerName="System.Data.SqlClient" />
+        <add name="QCPressData.Properties.Settings.QualityControlDBDEVConnectionString"
+            connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=QualityControlDB;Persist Security Info=True;User ID=sa;Password=m1llm4ts!"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

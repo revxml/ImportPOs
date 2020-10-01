@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<configuration>
+  <connectionStrings>
+    <add name="DATA02Connection" providerName="System.Data.SqlClient" connectionString="Data Source=10.123.0.9;Initial Catalog=Data_02;User=sa;password=m1llm4ts!;Connection Timeout=0;"/>
+    <!--<add name="DATA802TestConnection" providerName="System.Data.SqlClient" connectionString="Data Source=10.123.0.21;Initial Catalog=Data_102;User=sa;password=m1llm4ts!;Connection Timeout=0;" />-->
+    <add name="DATA802TestConnection" providerName="System.Data.SqlClient" connectionString="Data Source=10.123.0.20;Initial Catalog=Data_02;User=sa;password=m1llm4ts!;Connection Timeout=0;"/>
+  </connectionStrings>
+
+  <appSettings>
+    <add key="IsTest" value="false"/>
+    <add key="SaveFilePath" value="\\mmfilesvr02\Billing\Logs\"/>
+    <add key="LastInvoicedDate" value="10/08/2014"/>
+    <add key="HoursBetweenRuns" value="2"/>
+    <add key="ClientSettingsProvider.ServiceUri" value=""/>
+  </appSettings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400"/>
+      </providers>
+    </roleManager>
+  </system.web>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>

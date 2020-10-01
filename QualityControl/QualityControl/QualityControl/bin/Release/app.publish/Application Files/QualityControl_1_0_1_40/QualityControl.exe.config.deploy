@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+  </configSections>
+  <appSettings>
+    <add key="IsTesting" value="0"/>
+    
+  </appSettings>
+  <connectionStrings>
+    <add name="FMProdConnection" connectionString="Data Source=MILWEBSQL01;Initial Catalog=FanmatsProduction; User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="FMProdTestConnection" connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=FanmatsProduction;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="DATA09Connection" connectionString="Data Source=MMMACSQL01;Initial Catalog=Data_09;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="DATA109TestConnection" connectionString="Data Source=MMQAWEBSQL01;Initial Catalog=Data_109;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="DATA02Connection" connectionString="Data Source=MMMACSQL01;Initial Catalog=Data_02;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="DATA102TestConnection" connectionString="Data Source=MMQAWEBSQL01;Initial Catalog=Data_102;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="QualityControlConnection" connectionString="Data Source=MMMACSQL01;Initial Catalog=QualityControlDB;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="QualityControlTestConnection" connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=QualityControlDB;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="QualityControl.Properties.Settings.QualityControlDBConnectionString"
+      connectionString="Data Source=MMMACSQL01;Initial Catalog=QualityControlDB;Persist Security Info=True;User ID=sa;Password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+</configuration>
