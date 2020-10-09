@@ -57,27 +57,25 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Batch Date:</Value>
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.92861in</Top>
-            <Left>0.14241in</Left>
+            <Top>0.11819in</Top>
+            <Left>0.19139in</Left>
             <Height>0.25in</Height>
-            <Width>1.15094in</Width>
+            <Width>0.9206in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox2">
@@ -88,28 +86,26 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Vendor PO:</Value>
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.38144in</Top>
-            <Left>0.14241in</Left>
-            <Height>0.25in</Height>
-            <Width>1.15094in</Width>
+            <Top>0.38208in</Top>
+            <Left>0.19139in</Left>
+            <Height>0.20833in</Height>
+            <Width>0.90671in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="Textbox3">
@@ -120,32 +116,29 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Vendor Batch:</Value>
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>1.85313in</Top>
-            <Left>0.14241in</Left>
+            <Top>0.6043in</Top>
+            <Left>0.18799in</Left>
             <Height>0.25in</Height>
-            <Width>1.35012in</Width>
+            <Width>1.01389in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="batchNumber">
-            <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
@@ -154,7 +147,7 @@
                     <Value>=Fields!batchNumber.Value</Value>
                     <Style>
                       <FontFamily>Bar Code 39 f HR</FontFamily>
-                      <FontSize>36pt</FontSize>
+                      <FontSize>20pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -164,10 +157,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>batchNumber</rd:DefaultName>
-            <Top>2.94981in</Top>
-            <Left>0.14241in</Left>
-            <Height>1.09906in</Height>
-            <Width>3.16981in</Width>
+            <Top>0.86819in</Top>
+            <Left>0.19139in</Left>
+            <Height>0.55189in</Height>
+            <Width>2.75366in</Width>
             <ZIndex>3</ZIndex>
             <DataElementName>batchNumber</DataElementName>
             <Style>
@@ -185,28 +178,22 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Pallet Number:</Value>
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>4.79243in</Top>
-            <Left>0.14581in</Left>
-            <Height>0.25in</Height>
-            <Width>1.47773in</Width>
+            <Top>1.43397in</Top>
+            <Left>0.18799in</Left>
+            <Height>0.23061in</Height>
+            <Width>1.01049in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="createdDateTime">
@@ -217,28 +204,26 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Fields!createdDateTime.Value</Value>
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>createdDateTime</rd:DefaultName>
-            <Top>0.92861in</Top>
-            <Left>1.32113in</Left>
+            <Top>0.11819in</Top>
+            <Left>1.16755in</Left>
             <Height>0.25in</Height>
-            <Width>1.99109in</Width>
+            <Width>1.77411in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="vendorPONumber">
@@ -249,28 +234,26 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Fields!vendorPONumber.Value</Value>
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>vendorPONumber</rd:DefaultName>
-            <Top>1.38144in</Top>
-            <Left>1.42309in</Left>
-            <Height>0.25in</Height>
-            <Width>1.88914in</Width>
+            <Top>0.38208in</Top>
+            <Left>1.13977in</Left>
+            <Height>0.20833in</Height>
+            <Width>1.80189in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="vendorBatchID">
@@ -281,28 +264,26 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Fields!vendorBatchID.Value</Value>
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>vendorBatchID</rd:DefaultName>
-            <Top>1.85313in</Top>
-            <Left>1.49253in</Left>
-            <Height>0.25in</Height>
-            <Width>1.81969in</Width>
+            <Top>0.61819in</Top>
+            <Left>1.20188in</Left>
+            <Height>0.23611in</Height>
+            <Width>1.74318in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
             </Style>
           </Textbox>
           <Textbox Name="palletNumber">
@@ -313,44 +294,34 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!PalletNumber.Value</Value>
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                    </Style>
+                    <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>palletNumber</rd:DefaultName>
-            <Top>4.79243in</Top>
-            <Left>1.95608in</Left>
-            <Height>0.25in</Height>
+            <Top>1.43397in</Top>
+            <Left>2.60544in</Left>
+            <Height>0.20283in</Height>
             <Width>0.33962in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>5.46396in</Height>
+        <Height>1.74528in</Height>
         <Style />
       </Body>
-      <Width>3.46868in</Width>
+      <Width>3.09132in</Width>
       <Page>
-        <PageHeight>5.83in</PageHeight>
-        <PageWidth>3.8in</PageWidth>
-        <InteractiveHeight>4.1in</InteractiveHeight>
-        <InteractiveWidth>3.8in</InteractiveWidth>
-        <LeftMargin>0.1in</LeftMargin>
-        <RightMargin>0.1in</RightMargin>
-        <TopMargin>0.1in</TopMargin>
-        <BottomMargin>0.1in</BottomMargin>
+        <PageHeight>2in</PageHeight>
+        <PageWidth>4in</PageWidth>
+        <InteractiveHeight>2in</InteractiveHeight>
+        <InteractiveWidth>4in</InteractiveWidth>
         <ColumnSpacing>0.25in</ColumnSpacing>
         <Style />
       </Page>

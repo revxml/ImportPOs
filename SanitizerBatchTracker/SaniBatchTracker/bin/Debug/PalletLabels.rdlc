@@ -143,7 +143,7 @@
               <BreakLocation>End</BreakLocation>
             </PageBreak>
             <Height>1.18396in</Height>
-            <Width>3.42748in</Width>
+            <Width>3.42747in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -156,10 +156,14 @@
       </Body>
       <Width>3.53125in</Width>
       <Page>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>2in</PageHeight>
+        <PageWidth>4in</PageWidth>
+        <InteractiveHeight>2in</InteractiveHeight>
+        <InteractiveWidth>4in</InteractiveWidth>
+        <LeftMargin>0.1in</LeftMargin>
+        <RightMargin>0.1in</RightMargin>
+        <TopMargin>0.1in</TopMargin>
+        <BottomMargin>0.1in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
