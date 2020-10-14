@@ -21,6 +21,10 @@
           <DataField>batchNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="boxNumber">
+          <DataField>boxNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="createdDateTime">
           <DataField>createdDateTime</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
@@ -51,22 +55,27 @@
         <ReportItems>
           <Textbox Name="Textbox1">
             <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
                     <Value>Batch Date:</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.11819in</Top>
-            <Left>0.19139in</Left>
-            <Height>0.25in</Height>
+            <Top>0.13194in</Top>
+            <Left>0.2686in</Left>
+            <Height>0.19444in</Height>
             <Width>0.9206in</Width>
             <Style>
               <Border>
@@ -80,22 +89,27 @@
           </Textbox>
           <Textbox Name="Textbox2">
             <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
                     <Value>Vendor PO:</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.38208in</Top>
-            <Left>0.19139in</Left>
-            <Height>0.20833in</Height>
+            <Top>0.37847in</Top>
+            <Left>0.2686in</Left>
+            <Height>0.18056in</Height>
             <Width>0.90671in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -110,23 +124,28 @@
           </Textbox>
           <Textbox Name="Textbox3">
             <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
                     <Value>Vendor Batch:</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.6043in</Top>
-            <Left>0.18799in</Left>
-            <Height>0.25in</Height>
-            <Width>1.01389in</Width>
+            <Top>0.61111in</Top>
+            <Left>0.2652in</Left>
+            <Height>0.20833in</Height>
+            <Width>1.10823in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -139,6 +158,7 @@
             </Style>
           </Textbox>
           <Textbox Name="batchNumber">
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
@@ -157,8 +177,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>batchNumber</rd:DefaultName>
-            <Top>0.86819in</Top>
-            <Left>0.19139in</Left>
+            <Top>0.875in</Top>
+            <Left>0.2686in</Left>
             <Height>0.55189in</Height>
             <Width>2.75366in</Width>
             <ZIndex>3</ZIndex>
@@ -172,23 +192,28 @@
           </Textbox>
           <Textbox Name="Textbox4">
             <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
                     <Value>Pallet Number:</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox4</rd:DefaultName>
-            <Top>1.43397in</Top>
-            <Left>0.18799in</Left>
+            <Top>1.44078in</Top>
+            <Left>0.2652in</Left>
             <Height>0.23061in</Height>
-            <Width>1.01049in</Width>
+            <Width>1.2086in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -198,21 +223,26 @@
           </Textbox>
           <Textbox Name="createdDateTime">
             <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
                     <Value>=Fields!createdDateTime.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>createdDateTime</rd:DefaultName>
-            <Top>0.11819in</Top>
-            <Left>1.16755in</Left>
+            <Top>0.125in</Top>
+            <Left>1.24476in</Left>
             <Height>0.25in</Height>
             <Width>1.77411in</Width>
             <ZIndex>5</ZIndex>
@@ -228,21 +258,26 @@
           </Textbox>
           <Textbox Name="vendorPONumber">
             <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
                     <Value>=Fields!vendorPONumber.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>vendorPONumber</rd:DefaultName>
-            <Top>0.38208in</Top>
-            <Left>1.13977in</Left>
+            <Top>0.39584in</Top>
+            <Left>1.21698in</Left>
             <Height>0.20833in</Height>
             <Width>1.80189in</Width>
             <ZIndex>6</ZIndex>
@@ -258,23 +293,28 @@
           </Textbox>
           <Textbox Name="vendorBatchID">
             <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
                     <Value>=Fields!vendorBatchID.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>vendorBatchID</rd:DefaultName>
-            <Top>0.61819in</Top>
-            <Left>1.20188in</Left>
+            <Top>0.625in</Top>
+            <Left>1.49607in</Left>
             <Height>0.23611in</Height>
-            <Width>1.74318in</Width>
+            <Width>1.5262in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -288,21 +328,26 @@
           </Textbox>
           <Textbox Name="palletNumber">
             <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!PalletNumber.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>palletNumber</rd:DefaultName>
-            <Top>1.43397in</Top>
-            <Left>2.60544in</Left>
+            <Top>1.42689in</Top>
+            <Left>1.51547in</Left>
             <Height>0.20283in</Height>
             <Width>0.33962in</Width>
             <ZIndex>8</ZIndex>
@@ -312,16 +357,86 @@
               </Border>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Item:</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>1.42689in</Top>
+            <Left>2.25367in</Left>
+            <Height>0.23061in</Height>
+            <Width>0.41615in</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Textbox>
+          <Textbox Name="boxNumber">
+            <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!BoxNumber.Value</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <Format>0;(0)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.42689in</Top>
+            <Left>2.67925in</Left>
+            <Height>0.20283in</Height>
+            <Width>0.33962in</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>1.74528in</Height>
-        <Style />
+        <Height>1.67924in</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
       </Body>
-      <Width>3.09132in</Width>
+      <Width>3.29245in</Width>
       <Page>
         <PageHeight>2in</PageHeight>
         <PageWidth>4in</PageWidth>
-        <InteractiveHeight>2in</InteractiveHeight>
-        <InteractiveWidth>4in</InteractiveWidth>
+        <InteractiveHeight>0in</InteractiveHeight>
+        <InteractiveWidth>0in</InteractiveWidth>
+        <LeftMargin>0.1in</LeftMargin>
+        <RightMargin>0.1in</RightMargin>
+        <TopMargin>0.1in</TopMargin>
+        <BottomMargin>0.1in</BottomMargin>
         <ColumnSpacing>0.25in</ColumnSpacing>
         <Style />
       </Page>
@@ -339,6 +454,17 @@
         </DataSetReference>
       </ValidValues>
     </ReportParameter>
+    <ReportParameter Name="BoxNumber">
+      <DataType>Integer</DataType>
+      <Prompt>ReportParameter1</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DSPalletLabels</DataSetName>
+          <ValueField>boxNumber</ValueField>
+          <LabelField>boxNumber</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -349,6 +475,11 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>PalletNumber</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>BoxNumber</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

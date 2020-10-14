@@ -37,6 +37,10 @@
           <DataField>vendorPONumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="boxNumber">
+          <DataField>boxNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SaniBatchTracker</rd:DataSetName>
@@ -49,16 +53,16 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Tablix Name="Tablix4">
+          <Tablix Name="tbxPalletLabels">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.32075in</Width>
+                  <Width>0.85849in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>1.18396in</Height>
+                  <Height>0.22453in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -68,12 +72,16 @@
                             <Parameter Name="PalletNumber">
                               <Value>=Fields!palletNumber.Value</Value>
                             </Parameter>
+                            <Parameter Name="BoxNumber">
+                              <Value>=Fields!boxNumber.Value</Value>
+                            </Parameter>
                           </Parameters>
                           <KeepTogether>true</KeepTogether>
                           <Style>
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <VerticalAlign>Top</VerticalAlign>
                           </Style>
                         </Subreport>
                       </CellContents>
@@ -93,47 +101,22 @@
                   <Group Name="palletNumber">
                     <GroupExpressions>
                       <GroupExpression>=Fields!palletNumber.Value</GroupExpression>
+                      <GroupExpression>=Fields!boxNumber.Value</GroupExpression>
                     </GroupExpressions>
+                    <PageBreak>
+                      <BreakLocation>Between</BreakLocation>
+                    </PageBreak>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!palletNumber.Value</Value>
                     </SortExpression>
+                    <SortExpression>
+                      <Value>=Fields!boxNumber.Value</Value>
+                    </SortExpression>
                   </SortExpressions>
-                  <TablixHeader>
-                    <Size>0.10672in</Size>
-                    <CellContents>
-                      <Textbox Name="Textbox21">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value />
-                                <Style />
-                              </TextRun>
-                            </TextRuns>
-                            <Style />
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>Textbox21</rd:DefaultName>
-                        <Style>
-                          <Border>
-                            <Style>None</Style>
-                          </Border>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixHeader>
                   <TablixMembers>
-                    <TablixMember>
-                      <Group Name="Details" />
-                    </TablixMember>
+                    <TablixMember />
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
@@ -142,8 +125,16 @@
             <PageBreak>
               <BreakLocation>End</BreakLocation>
             </PageBreak>
-            <Height>1.18396in</Height>
-            <Width>3.42747in</Width>
+            <SortExpressions>
+              <SortExpression>
+                <Value>=Fields!palletNumber.Value</Value>
+              </SortExpression>
+              <SortExpression>
+                <Value>=Fields!boxNumber.Value</Value>
+              </SortExpression>
+            </SortExpressions>
+            <Height>0.22453in</Height>
+            <Width>0.85849in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -151,15 +142,15 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.23585in</Height>
+        <Height>0.22453in</Height>
         <Style />
       </Body>
-      <Width>3.53125in</Width>
+      <Width>0.85849in</Width>
       <Page>
         <PageHeight>2in</PageHeight>
         <PageWidth>4in</PageWidth>
-        <InteractiveHeight>2in</InteractiveHeight>
-        <InteractiveWidth>4in</InteractiveWidth>
+        <InteractiveHeight>0in</InteractiveHeight>
+        <InteractiveWidth>0in</InteractiveWidth>
         <LeftMargin>0.1in</LeftMargin>
         <RightMargin>0.1in</RightMargin>
         <TopMargin>0.1in</TopMargin>
@@ -174,6 +165,8 @@
       <NumberOfRows>2</NumberOfRows>
     </GridLayoutDefinition>
   </ReportParametersLayout>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataElementStyle>Element</DataElementStyle>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>2535aba9-fd86-4d30-88db-a1483f8807c9</rd:ReportID>
 </Report>
