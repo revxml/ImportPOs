@@ -14,14 +14,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="TransactBySchedule.exe.manifest" size="29276">
+    <dependentAssembly dependencyType="install" codebase="TransactBySchedule.exe.manifest" size="36612">
       <assemblyIdentity name="TransactBySchedule.exe" version="1.0.0.18" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DqGd2inTm3+n1b6cpIYOSRm0fFY=</dsig:DigestValue>
+        <dsig:DigestValue>g3VemGuSK6Lnd/RUgr2mpB5edHY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
