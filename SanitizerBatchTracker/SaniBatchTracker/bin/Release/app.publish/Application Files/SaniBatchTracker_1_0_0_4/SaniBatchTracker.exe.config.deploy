@@ -7,12 +7,18 @@
     <add key="LogFilePath" value="\\mmfilesvr02\Production\SanitizerBatchManagement\" />
     <add key="TestLogFilePath" value="C:\temp\SanitizerBatchManagement\" />
     <add key="ClientSettingsProvider.ServiceUri" value="" />
+    <add key="DocumentPrinter" value="Brother HL-L6200DW series" />
+    <add key="LabelPrinter" value="ZDesigner LP 2844" />
   </appSettings>
   <connectionStrings>
-    <add name="MacolaConnection" connectionString="Data Source=MMMACSQL01;Initial Catalog=Data_02;User=sa;password=m1llm4ts!" providerName="System.Data.SqlClient" />
-    <add name="MacolaDevConnection" connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=Data_02;User=sa;password=m1llm4ts!" providerName="System.Data.SqlClient" />
+    <add name="MacolaConnection" connectionString="Data Source=MMMACSQL01;Initial Catalog=Data_02;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
+    <add name="MacolaDevConnection" connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=Data_02;User=sa;password=m1llm4ts!"
+      providerName="System.Data.SqlClient" />
     <add name="DefaultConnection" connectionString="Data Source = |SQL/CE|" />
-    <add name="SaniBatchTracker.Properties.Settings.DEV_Data02_Connection" connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=Data_02;Integrated Security=True" providerName="System.Data.SqlClient" />
+    <add name="SaniBatchTracker.Properties.Settings.DEV_Data02_Connection"
+      connectionString="Data Source=MMDEVMACSQL01;Initial Catalog=Data_02;Integrated Security=True"
+      providerName="System.Data.SqlClient" />
   </connectionStrings>
   <startup>
     <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6" />
